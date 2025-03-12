@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "./Components/Button";
+import ContactForm from "./Components/contactform";
 
 
-const App = ({white,title}) =>{
+
+const App = () =>{
   
 
   return (
@@ -43,7 +45,7 @@ const App = ({white,title}) =>{
          <img src="section1_image.svg" alt="section1_image" className=" w-[50%] absolute bottom-2 left-50" /></div>
         </div>
         
-          <hr className="border-2 border-[#343461]"/>
+          
           <div className="bg-[#222831] text-white py-12 flex ">
         {/* <div className="relative max-w-4xl space-y-14 px-14 text-start w-[70%]">
            <div>
@@ -107,15 +109,23 @@ const App = ({white,title}) =>{
             
             
           </div >
-          <div className="bg-[#393E4680] m-5 p-6"><img src="/section3_image2.svg" alt="" /></div>
+          <div className="bg-[#393E4680] m-5 hover:transition-transform p-6"><img src="/section3_image2.svg" alt="" /></div>
           <div className="bg-[#393E4680] m-5 p-6"><img src="/phone_pics.svg" alt="" /></div>
           </div>
           
         </div>
-        <div className="flex space-x-4 px-14">
-        <h2 className="text-4xl text-white mb-5 font-bold mt-40 relative ">Got a project in <span className="text-4xl font-bold text-[#00ADB5] absolute left-0 bottom-20">mind?</span></h2>
-          <img src="/contact_image.svg" alt="" className="" />
-          <div><img src="" alt="" /></div>
+        <div className="flex space-x-40 px-14 w-full ">
+          <div className="relative">
+        <h2 className="text-4xl text-white mb-5 font-bold mt-40 relative ">Got a project in <span className="text-4xl font-bold text-[#00ADB5] absolute left-0 -bottom-10">mind?</span></h2>
+          <div className="absolute left-[50%]">
+            <img src="/contact_image.svg" alt="" className="w-[80%] right-[50%] " />
+          </div>
+          
+          </div>
+
+          <div className="w-[50%]">
+            <ContactForm />
+          </div>
         </div>
 
         {/* footer */}
