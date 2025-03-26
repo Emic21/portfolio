@@ -22,7 +22,7 @@ const App = () =>{
           </div>
           
         </header>
-        <div className="flex justify-between px-14 mt-35 pb-10">
+        <div className="flex justify-between  px-14 mt-35 pb-10">
           <div className="flex mt-40 relative">
             <img src="section1_side1_image.svg" alt="" className="h-[45%]"/>
                 <h2 className="text-[#EEEEEE] text-6xl font-semibold relative">
@@ -42,7 +42,7 @@ const App = () =>{
             <img src="section1_doodlesround.svg" alt="section1_image" className="w-[80%]" />
             
           
-         <img src="section1_image.svg" alt="section1_image" className=" w-[50%] absolute bottom-2 left-50" /></div>
+         <img src="section1_image.svg" alt="section1_image" className=" w-[50%]  absolute bottom-2 left-50" /></div>
         </div>
         
           
