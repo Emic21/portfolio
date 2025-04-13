@@ -10,24 +10,24 @@ const App = () =>{
   return (
     <div className="relative bg-[#222831]">
      
-        <header className="items-center px-14 py-4 w-[100%] pb-10">
+        <nav className="items-center px-14 py-4 w-[100%] pb-10 flex flex-col md:flex-row justify-between ">
           <div className="flex justify-between items-center ">
           <h2 className="text-[#EEEEEE] flex justify-between">Michael</h2>
-          <div className="flex space-x-5 text-[#EEEEEE] ">
+          <div className="space-x-5 text-[#EEEEEE] hidden md:flex gap-4 justify-between items-center ">
             <a href="#">Home</a>
           <a href="#">About Me</a>
           <a href="#">Contact</a>
           </div>
           
           </div>
-          
-        </header>
-        <div className="flex justify-between  px-14 mt-35 pb-10">
+          <button className="md:hidden">☰</button>
+        </nav>
+        <div className="flex justify-between  px-14 mt-35 pb-10 flex-col md:flex-row gap-4">
           <div className="flex mt-40 relative">
             <img src="section1_side1_image.svg" alt="" className="h-[45%]"/>
-                <h2 className="text-[#EEEEEE] text-6xl font-semibold relative">
+                <h2 className="text-[#EEEEEE] text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold relative">
                   Frontend
-                   <span className="text-[#00ADB5] text-6xl font-semibold block mt-2">
+                   <span className="text-[#00ADB5] text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold block mt-2">
                   Developer
                    </span>
               </h2>
@@ -38,7 +38,7 @@ const App = () =>{
               </div>
            
           </div>
-          <div className="relative">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
             <img src="section1_doodlesround.svg" alt="section1_image" className="w-[80%]" />
             
           
@@ -46,7 +46,7 @@ const App = () =>{
         </div>
         
           
-          <div className="bg-[#222831] text-white py-12 flex ">
+          <div className="bg-[#222831] text-white py-12 flex flex-col md:flex-row gap-4">
         {/* <div className="relative max-w-4xl space-y-14 px-14 text-start w-[70%]">
            <div>
             <img src="/section2-music.svg" alt="" className="absolute  left-20 top-10"/>
@@ -62,16 +62,16 @@ const App = () =>{
     {/* <!-- lightbulb.svg overlaying About Me --> */}
     <img src="/lightbulb.svg" alt="Lightbulb" className="absolute top-[25%] left-[30%] w-[8%]" />
     {/* <!-- About Me content --> */}
-    <div className="relative pt-20">
+    <div className="relative pt-20 m-4 items-center ">
       {/* <!-- Your About Me content here --> */}
-      <h2 className="text-4xl font-bold text-white mb-4">About <span className="text-[#00ADB5]">Me</span></h2>
-          <p className="text-lg mb-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4">About <span className="text-[#00ADB5]">Me</span></h2>
+          <p className="text-sm md:text-base lg:text-lg mb-4">
             Hi, I'm a passionate <span className="text-teal-300">Frontend Developer </span> 
              with a keen eye for design and a love for crafting seamless user experiences. 
             I specialize in modern web technologies like <strong>React, JavaScript, HTML, CSS, and Tailwind</strong>.
           
           </p>
-          <p className="text-lg mb-6">
+          <p className="text-sm md:text-base lg:text-lg mb-6">
             I thrive on solving problems and turning ideas into reality through code. 
             Whether it’s creating interactive UI components or optimizing website performance, 
             I always strive for excellence.
@@ -95,7 +95,7 @@ const App = () =>{
         </div>
       
         </div>
-        <div class="relative px-14 bg-[url('/doodle_items.svg')]  bg-repeat bg-[length:25%_75%]">
+        <div className="relative px-14 bg-[url('/doodle_items.svg')] sm:bg-[url('/doodle_items.svg')] md:bg-[url('/doodle_items.svg')] bg-center w-full bg-repeat ">
           <h2 className="text-4xl text-white mb-5 font-bold">My Resent <span className="text-4xl font-bold text-[#00ADB5]">Work</span></h2>
           <div className="flex space-x-5">
             <Button title={"All"} white/>
@@ -103,27 +103,27 @@ const App = () =>{
             <Button title={"UX"} />
             <Button title={"Web Design"} />
           </div>
-          <div className="flex space-x-6">
+          <div className="flex flex-col md:flex-row gap-4  space-x-6">
             <div className="bg-[#393E4680] m-5 p-6">
-            <img src="/Course_Website_Thumbnail.svg" alt="" />
+            <img src="/Course_Website_Thumbnail.svg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto" />
             
             
           </div >
-          <div className="bg-[#393E4680] m-5 hover:transition-transform p-6"><img src="/section3_image2.svg" alt="" /></div>
-          <div className="bg-[#393E4680] m-5 p-6"><img src="/phone_pics.svg" alt="" /></div>
+          <div className="bg-[#393E4680] m-5 hover:transition-transform p-6"><img src="/section3_image2.svg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"/></div>
+          <div className="bg-[#393E4680] m-5 p-6"><img src="/phone_pics.svg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto" /></div>
           </div>
           
         </div>
-        <div className="flex space-x-40 px-14 w-full ">
+        <div className="flex space-x-40 px-14 w-full flex-col md:flex-row gap-4 ">
           <div className="relative">
-        <h2 className="text-4xl text-white mb-5 font-bold mt-40 relative ">Got a project in <span className="text-4xl font-bold text-[#00ADB5] absolute left-0 -bottom-10">mind?</span></h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-white mb-5 font-bold mt-40 relative ">Got a project in <span className="text-4xl font-bold text-[#00ADB5] absolute left-0 -bottom-10">mind?</span></h2>
           <div className="absolute left-[50%]">
-            <img src="/contact_image.svg" alt="" className="w-[80%] right-[50%] " />
+            <img src="/contact_image.svg" alt="" className="right-[50%] w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto " />
           </div>
           
           </div>
 
-          <div className="w-[50%]">
+          <div className="w-full  mx-auto">
             <ContactForm />
           </div>
         </div>

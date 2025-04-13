@@ -31,7 +31,7 @@ function ContactForm() {
     <div className="max-w-md mx-auto p-6 bg-[#222831] rounded-md shadow-md">
     
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className=" flex space-x-5 gap-40">
+        <div className=" flex space-x-5 gap-40 flex-col md:flex-row">
           <div className="w-[50%]">
           <label htmlFor="name" className="block text-sm font-medium text-[#EEEEEE]">
             Name
