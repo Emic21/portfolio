@@ -28,43 +28,45 @@ function ContactForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-[#222831] rounded-md shadow-md">
-    
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className=" flex space-x-5 gap-40 flex-col md:flex-row">
-          <div className="w-[50%]">
-          <label htmlFor="name" className="block text-sm font-medium text-[#EEEEEE]">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Your Name"
-            required
-            className="mt-1 block w-auto px-4 py-2 bg-[#393E4680] text-[#EEEEEE] placeholder-[#AAAAAA] border border-[#393E4680] rounded-md"
-          />
+    <div className="max-w-4xl mx-auto p-4 sm:p-6 bg-[#222831] rounded-md shadow-md">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Name and Email in responsive grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="w-full">
+            <label htmlFor="name" className="block text-sm font-medium text-[#EEEEEE] mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your Name"
+              required
+              className="w-full px-4 py-3 bg-[#393E4680] text-[#EEEEEE] placeholder-[#AAAAAA] border border-[#393E4680] rounded-md focus:outline-none focus:ring-2 focus:ring-[#00ADB5] transition-colors"
+            />
+          </div>
+          <div className="w-full">
+            <label htmlFor="email" className="block text-sm font-medium text-[#EEEEEE] mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Your Email"
+              required
+              className="w-full px-4 py-3 bg-[#393E4680] text-[#EEEEEE] placeholder-[#AAAAAA] border border-[#393E4680] rounded-md focus:outline-none focus:ring-2 focus:ring-[#00ADB5] transition-colors"
+            />
+          </div>
         </div>
-        <div className="w-[50%]">
-          <label htmlFor="email" className="block text-sm font-medium text-[#EEEEEE]">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Your Email"
-            required
-            className="mt-1 block w-auto px-4 py-2 bg-[#393E4680] text-[#EEEEEE] placeholder-[#AAAAAA] border border-[#393E4680] rounded-md"
-          />
-        </div>
-        </div>
+        
+        {/* Message field */}
         <div className="w-full">
-          <label htmlFor="message" className="block text-sm font-medium text-[#EEEEEE]">
+          <label htmlFor="message" className="block text-sm font-medium text-[#EEEEEE] mb-2">
             Message
           </label>
           <textarea
@@ -74,16 +76,20 @@ function ContactForm() {
             onChange={handleChange}
             placeholder="Your Message"
             required
-            className="mt-1 block w-[150%] px-4 py-2 bg-[#393E4680] text-[#EEEEEE] placeholder-[#AAAAAA] border border-[#393E4680] rounded-md "
-            rows="4"
+            className="w-full px-4 py-3 bg-[#393E4680] text-[#EEEEEE] placeholder-[#AAAAAA] border border-[#393E4680] rounded-md focus:outline-none focus:ring-2 focus:ring-[#00ADB5] transition-colors resize-vertical"
+            rows="5"
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="w-[40%] py-2 px-4 bg-[#00ADB5] text-white font-semibold rounded-full hover:bg-[#5B6EAE] focus:outline-none focus:ring-2 focus:ring-[#7289DA]"
-        >
-          Send Message
-        </button>
+        
+        {/* Submit button */}
+        <div className="flex justify-center md:justify-start">
+          <button
+            type="submit"
+            className="w-full md:w-auto min-w-[200px] py-3 px-8 bg-[#00ADB5] text-white font-semibold rounded-full hover:bg-[#5B6EAE] focus:outline-none focus:ring-2 focus:ring-[#7289DA] transition-colors transform hover:scale-105 duration-200"
+          >
+            Send Message
+          </button>
+        </div>
       </form>
     </div>
   );
