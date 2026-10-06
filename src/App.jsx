@@ -151,7 +151,7 @@ const App = () => {
                   About <span className="text-[#00ADB5]">Me</span>
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg mb-4 text-justify">
-                  Hi, I'm a passionate <span className="text-teal-300">Frontend Developer</span> 
+                  Hi, I'm a passionate <span className="text-teal-300">Frontend Developer, Web Scraping and ETL Specialist</span> 
                   with a keen eye for design and a love for crafting seamless user experiences. 
                   I specialize in modern web technologies like <strong>React, JavaScript, HTML, CSS, and Tailwind</strong>.
                 </p>
