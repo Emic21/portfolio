@@ -17,17 +17,20 @@ const App = () => {
     },
     {
       id: 2,
-      title: "UI Project",
+      title: "UI/UX Project",
       image: "/section3_image2.svg",
-      category: "UI",
-      categories: ["All", "UI"]
+      category: "UI/UX",
+      categories: ["All", "UI/UX"]
     },
     {
-      id: 3,
-      title: "Mobile App",
-      image: "/phone_pics.svg",
-      category: "UX",
-      categories: ["All", "UX"]
+     {
+  id: 3,
+  title: "La Saponaria Web Scraping Project",
+  image: "/la-saponaria-thumbnail.png",
+  pdf: "/La_Saponaria_Project.pdf",
+  category: "Web Scraping and Data Extraction",
+  categories: ["All", "Web Scraping and Data Extraction"]
+}
     }
   ];
 
@@ -215,12 +218,12 @@ const App = () => {
               white={activeFilter === "UI"}
             />
           </div>
-          <div onClick={() => setActiveFilter("UX")}>
-            <Button 
-              title="UX" 
-              white={activeFilter === "UX"}
-            />
-          </div>
+         <div onClick={() => setActiveFilter("Web Scraping and Data Extraction")}>
+  <Button 
+    title="Web Scraping"
+    white={activeFilter === "Web Scraping and Data Extraction"}
+  />
+</div>
           <div onClick={() => setActiveFilter("Web Design")}>
             <Button 
               title="Web Design" 
@@ -229,27 +232,40 @@ const App = () => {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
-            <div 
-              key={project.id}
-              className="bg-[#393E4680] p-4 sm:p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group"
-            >
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-auto mb-4 group-hover:opacity-90 transition-opacity duration-300" 
-              />
-              <h3 className="text-[#EEEEEE] text-lg font-semibold text-center group-hover:text-[#00ADB5] transition-colors duration-300">
-                {project.title}
-              </h3>
-              <p className="text-[#AAAAAA] text-sm text-center mt-2">
-                {project.category}
-              </p>
-            </div>
-          ))}
-        </div>
+ {/* Projects Grid */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {filteredProjects.map((project) => (
+    <div 
+      key={project.id}
+      onClick={() => {
+        if (project.pdf) {
+          window.open(project.pdf, "_blank");
+        }
+      }}
+      className="bg-[#393E4680] p-4 sm:p-6 rounded-lg hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group"
+    >
+      <img 
+        src={project.image} 
+        alt={project.title} 
+        className="w-full h-auto mb-4 group-hover:opacity-90 transition-opacity duration-300" 
+      />
+
+      <h3 className="text-[#EEEEEE] text-lg font-semibold text-center group-hover:text-[#00ADB5] transition-colors duration-300">
+        {project.title}
+      </h3>
+
+      <p className="text-[#AAAAAA] text-sm text-center mt-2">
+        {project.category}
+      </p>
+
+      {project.pdf && (
+        <p className="text-[#00ADB5] text-sm text-center mt-3">
+          View Project →
+        </p>
+      )}
+    </div>
+  ))}
+</div>
 
         {/* No projects message */}
         {filteredProjects.length === 0 && (
