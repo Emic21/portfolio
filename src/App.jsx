@@ -23,14 +23,14 @@ const App = () => {
       categories: ["All", "UI/UX"]
     },
     {
-     {
+     
   id: 3,
   title: "La Saponaria Web Scraping Project",
   image: "/la-saponaria-thumbnail.png",
   pdf: "/La_Saponaria_Project.pdf",
   category: "Web Scraping and Data Extraction",
   categories: ["All", "Web Scraping and Data Extraction"]
-}
+
     }
   ];
 
