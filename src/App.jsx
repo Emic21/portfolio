@@ -101,7 +101,7 @@ const App = () => {
             <h2 className="text-[#EEEEEE] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-center md:text-left">
               Frontend
               <span className="text-[#00ADB5] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold block mt-2">
-                Developer
+                Developer and Web Scraping and ETL Specialist
               </span>
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8 md:mt-12 px-4 md:px-0">
@@ -152,9 +152,9 @@ const App = () => {
                   About <span className="text-[#00ADB5]">Me</span>
                 </h2>
                 <p className="text-sm md:text-base lg:text-lg mb-4 text-justify">
-                  Hi, I'm a passionate <span className="text-teal-300">Frontend Developer, Web Scraping and ETL Specialist</span> 
+                  Hi, I'm a passionate <span className="text-teal-300">Frontend Developer, Web Scraping and ETL Specialist </span> 
                   with a keen eye for design and a love for crafting seamless user experiences. 
-                  I specialize in modern web technologies like <strong>React, JavaScript, HTML, CSS, and Tailwind</strong>.
+                  I specialize in modern web technologies like <strong>React, JavaScript, HTML, CSS, and Tailwind, Python </strong>.
                 </p>
                 <p className="text-sm md:text-base lg:text-lg mb-6 text-justify">
                   I thrive on solving problems and turning ideas into reality through code. 
