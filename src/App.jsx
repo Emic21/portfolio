@@ -7,32 +7,30 @@ const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Sample project data
-  const projects = [
-    {
-      id: 1,
-      title: "Course Website",
-      image: "/Course_Website_Thumbnail.svg",
-      category: "Web Design",
-      categories: ["All", "Web Design"]
-    },
-    {
-      id: 2,
-      title: "UI/UX Project",
-      image: "/section3_image2.svg",
-      category: "UI/UX",
-      categories: ["All", "UI/UX"]
-    },
-    {
-     
-  id: 3,
-  title: "La Saponaria Web Scraping Project",
-  image: "/la-saponaria-thumbnail.png",
-  pdf: "/La_Saponaria_Project.pdf",
-  category: "Web Scraping and Data Extraction",
-  categories: ["All", "Web Scraping and Data Extraction"]
-
-    }
-  ];
+ const projects = [
+  {
+    id: 1,
+    title: "Course Website",
+    image: "/Course_Website_Thumbnail.svg",
+    category: "Web Design",
+    categories: ["All", "Web Design"]
+  },
+  {
+    id: 2,
+    title: "UI/UX Project",
+    image: "/section3_image2.svg",
+    category: "UI/UX",
+    categories: ["All", "UI/UX"]
+  },
+  {
+    id: 3,
+    title: "La Saponaria Web Scraping Project",
+    image: "/la-saponaria-thumbnail.png",
+    pdf: "/La_Saponaria_Project.pdf",
+    category: "Web Scraping and Data Extraction",
+    categories: ["All", "Web Scraping and Data Extraction"]
+  }
+];
 
   // Filter projects based on active filter
   const filteredProjects = projects.filter(project => 
@@ -212,10 +210,10 @@ const App = () => {
               white={activeFilter === "All"}
             />
           </div>
-          <div onClick={() => setActiveFilter("UI")}>
+          <div onClick={() => setActiveFilter("UI/UX")}>
             <Button 
-              title="UI" 
-              white={activeFilter === "UI"}
+              title="UI/UX" 
+              white={activeFilter === "UI/UX"}
             />
           </div>
          <div onClick={() => setActiveFilter("Web Scraping and Data Extraction")}>
